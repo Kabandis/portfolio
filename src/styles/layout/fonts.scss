@@ -16,6 +16,10 @@
     font-family: 'Pacifico';
 }
 
+@mixin lobster($style: regular){
+    font-family: 'Lobster';
+}
+
 @font-face {
     font-family: 'Roboto-Regular';
     src: url('../../assets/fonts/Roboto-Regular.woff2') format('woff2'),
@@ -56,6 +60,15 @@
     font-family: 'Pacifico';
     src: url('../../assets/fonts/Pacifico-Regular.woff2') format('woff2'),
         url('../../assets/fonts/Pacifico-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('../../assets/fonts/Lobster-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/Lobster-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

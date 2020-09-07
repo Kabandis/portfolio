@@ -1,0 +1,69 @@
+.skills_wrapper {
+    display: flex;
+    justify-content: center;
+    & .skills_container {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        background: #358fd4;
+        box-shadow: 15px 15px 0 0 #313480;
+        border-radius: 30px;
+        & .skills_list {
+            margin: 32px 16px;
+            display: flex;
+            flex-direction: column;
+            & .skills_header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #FFE1AB;
+                @include phones{
+                    font-size: 25px;
+                }
+                
+            }
+            & .block_skill {
+                margin: 0 30px 30px 30px;
+                padding: 10px 0 10px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #39a1f1;
+                border-radius: 30px;
+                box-shadow: 15px 15px 0 0 #313480;
+                @include tablets{
+                    flex-direction: column;
+                }
+                & .skills_img {
+                    height: 350px;
+                    @include landscape_phones{
+                        height: 250px;
+                    }
+                    @include phones{
+                        height: 170px;
+                    }
+                }
+                & .carousel_text {
+                    margin: 50px 0 0 50px;
+                    bottom: 110px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    @include tablets{
+                        margin: 18px 0 0 10px;
+                    }
+                    @include landscape_phones{
+                        margin: 10px 0 0 10px;
+                    }
+                    & h3 {
+                        color: #FFE1AB;
+                    }
+                }
+            }
+        }
+    }
+}

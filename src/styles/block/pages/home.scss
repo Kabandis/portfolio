@@ -1,75 +1,65 @@
-.container{
+.home_welcome {
+    height: calc(100vh - 60px);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.myVideo {
-    @include tablets {
-        height: 100vh;
-        width: auto;
+.video_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include large_desktop {
+        padding-top: 100px;
+    }
+    @include laptop {
+        padding-top: 0;
+    }
+    @include landscape_phones {
+        padding-top: 120px;
     }
     @include phones {
-        height: 100vh;
-        width: auto;
+        padding-top: 20px;
     }
-    height: auto;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    z-index: -10;
 }
 
 .hero {
-    height: 70vh;
+    margin-bottom: 300px;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @include large_desktop {
-        height: 68vh;
-    }
-    @include desktop {
-        height: 45vh;
-    }
-    @include laptop {
-        height: 45vh;
-    }
-    @include tablets {
-        height: 65vh;
+        margin-bottom: 250px;
     }
     @include landscape_phones {
-        height: 55vh;
-    }
-    @include phones {
-        height: 60vh;
+        margin-bottom: 50px;
     }
 }
 
 .hero_title {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     @include pacifico(regular);
     font-size: 50px;
     color: #323B8B;
     @include large_desktop {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 40px;
+        margin-bottom: 15px;
     }
     @include desktop {
-        font-size: 2rem;
-        margin-bottom: 0;
-    }
-    @include laptop {
-        font-size: 1.5rem;
-    }
-    @include tablets {
-        font-size: 3rem;
+        font-size: 35px;
+        margin-bottom: 15px;
     }
     @include landscape_phones {
-        font-size: 1.2rem;
-    }
-    @include phones {
-        font-size: 2rem;
+        font-size: 30px;
     }
 }
 
@@ -78,21 +68,15 @@
     @include roboto(bold);
     text-transform: uppercase;
     @include large_desktop {
-        font-size: 0.8rem;
+        font-size: 16px;
     }
     @include desktop {
-        font-size: 0.7rem;
-    }
-    @include laptop {
-        font-size: 0.6rem;
-    }
-    @include tablets {
-        font-size: 1rem;
+        font-size: 14px;
     }
     @include landscape_phones {
-        font-size: 0.5rem;
+        font-size: 12px;
     }
     @include phones {
-        font-size: 0.6rem;
+        font-size: 10px;
     }
 }

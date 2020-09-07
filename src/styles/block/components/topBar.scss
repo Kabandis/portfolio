@@ -1,33 +1,21 @@
 .nav {
-    height: 3rem;
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     @include tablets {
-        height: 2rem;
+        height: 20px;
     }
 }
 
 .nav-container {
     display: flex;
-    margin-top: 2rem;
-    @include desktop {
-        margin-top: 1rem;
-    }
-    @include laptop {
-        margin-top: 0;
-    }
-    @include tablets {
-        margin-top: 1rem;
-    }
-    @include phones {
-        margin-top: 0;
-    }
 }
 
 .nav-link {
-    margin: 0.7rem;
-    padding: 0 2.5rem;
+    margin: 10px;
+    padding: 0 35px;
     color: #6DBFFE;
     transition: 0.5s;
     text-shadow: 0 0 7px rgba(0, 0, 0, 1);
@@ -63,11 +51,11 @@
             transition: 0.5s;
     }
     @include large_desktop {
-        padding: 1rem;
+        padding: 0 16px;
     }
     @include tablets {
-        padding: 1rem;
-        font-size: 1rem;
+        padding: 0 10px;
+        font-size: 10px;
     }
     @include phones {
         padding: 0;

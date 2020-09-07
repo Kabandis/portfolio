@@ -19,10 +19,25 @@ body {
     @include laptop {
         font-size: 12px;
     }
+    @include landscape_phones {
+        font-size: 10px;
+    }
     @include tablets {
         font-size: 10px;
     }
     @include phones {
         font-size: 10px;
     }
+}
+
+.background {
+    min-height: 100vh;
+    background: #6C407A;
+}
+
+.wrapper {
+    margin-top: 16px;
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
 }
