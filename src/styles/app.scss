@@ -1,0 +1,11 @@
+@import "./mixins.scss";
+
+@import "./fonts.scss";
+
+@import "../components/NavBar/topBar.scss";
+@import "../components/NavBar/backdrop.scss";
+
+@import "../pages/Home/home.scss";
+@import "../pages/Bio//bio.scss";
+@import "../pages/Skills/skills.scss";
+@import "../pages/Projects/projects.scss";

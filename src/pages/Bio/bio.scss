@@ -1,0 +1,188 @@
+.bio_wrapper {
+    padding: 0 50px 0 50px;
+    @include large_desktop{
+        padding: 0;
+    }
+    @include laptop {
+        padding-top: 40px;
+    }
+    & .bio_container {
+        width: 70%;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        background: #358fd4;
+        border-radius: 30px;
+        box-shadow: 15px 15px 0 0 #313480;
+        transition: 0.5s;
+        &:hover {
+            transform: translate(0, -10px);
+            transition: 0.5s;
+        }
+        &_header {
+            margin-top: 16px;
+            display: flex;
+            justify-content: flex-start;
+            & .bio_header {
+                padding-bottom: 8px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                border-bottom: 4px solid #313480;
+                text-align: left;
+                color: #ffd382;
+                @include lobster(regular);
+                @include laptop{
+                    width: 100%;
+                }
+                & h2 {
+                    @include phones{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        & .bio_info {
+            padding: 16px 16px 16px 16px;
+            margin: 16px;
+            width: auto;
+            max-width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: justify;
+            color: rgb(249, 253, 188);
+            & .bio_text {
+                padding-left: 32px;
+                line-height: 20px;
+                & .text {
+                    text-indent: 10px;
+                    margin-bottom: 0;
+                }
+                @include roboto(medium);
+                @include tablets{
+                    padding: 0 20px 10px 20px;
+                    margin: 20px 0 0 0;
+                }
+                @include phones{
+                    padding-left: 0;
+                }
+            }
+            & .bio_photo {
+                width: 160px;
+                height: auto;
+            }
+            & .contact_list {
+                padding-left: 55px;
+                display: flex;
+                flex-wrap: wrap;
+                & .contact_item {
+                    margin-right: 45px;
+                    @include landscape_phones {
+                        margin-top: 20px;
+                    }
+                    & .contact_link {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        color: rgb(249, 253, 188);
+                        transition: 0.5s;
+                        &:hover {
+                            color: #000;
+                            text-decoration: none;
+                            transition: 0.5s;
+                        }
+                    }
+                    & .email {
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            left: -25px;
+                            background-image: url("../../assets/img/bio/mail.png");
+                            background-size: contain;
+                        }
+                    }
+                    & .phone {
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            left: -25px;
+                            background-image: url("../../assets/img/bio/telephone.png");
+                            background-size: contain;
+                        }
+                    }
+                    & .skype {
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            left: -25px;
+                            background-image: url("../../assets/img/bio/skype.png");
+                            background-size: contain;
+                        }
+                    }
+                }
+                @include tablets {
+                    margin: 20px 0 12px 0;
+                }
+                @include landscape_phones {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            @include tablets{
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                text-align: justify;
+            }
+        }
+        &:nth-child(even) {
+            margin-left: auto;
+            & .bio_container_header {
+                display: flex;
+                justify-content: flex-end;
+                & .bio_header {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            & .bio_info {
+                justify-content: flex-end;
+                & .bio_text {
+                    padding-right: 32px;
+                    padding-left: 0;
+                    @include tablets {
+                        padding: 0 20px 10px 20px;
+                    }
+                }
+                @include tablets {
+                    width: 100%;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    text-align: justify;
+                }
+                @include phones {
+                    width: 100%;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    text-align: justify;
+                }
+            }
+            @include tablets {
+                margin-left: 0;
+            }
+        }
+        @include laptop{
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

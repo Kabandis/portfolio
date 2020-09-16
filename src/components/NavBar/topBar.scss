@@ -1,0 +1,154 @@
+.nav {
+    position: relative;
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include laptop {
+        min-height: 50px;
+        height: 100%;
+        width: max-content;
+        position: fixed;
+        right: 0;
+        transform: translateX(300px);
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        transition: 0.5s;
+    }
+    @include tablets {
+        height: 20px;
+    }
+    & .nav-container {
+        display: flex;
+        margin-bottom: 0;
+        @include laptop {
+            flex-direction: column;
+            background: #000;
+            height: 100%;
+            width: 300px;
+            transform: translateX(300px);
+            transition: ease-out 0.5s;
+        }
+        @include landscape_phones {
+            
+            justify-content: center;
+            align-items: center;
+        }
+        & .nav-link {
+            margin: 10px;
+            padding: 0 35px;
+            color: #6DBFFE;
+            transition: ease-out 0.5s;
+            text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+            @include large_desktop {
+                padding: 0 16px;
+            }
+            @include laptop {
+                font-size: 20px;
+            }
+            @include tablets {
+                padding: 0 10px;
+            }
+            @include phones {
+                padding: 0;
+            }
+            &.active {
+                color: #FFE1AB;
+                @include roboto(bold);
+                &:hover {
+                    color: #6DBFFE;
+                    text-shadow:
+                        0 0 5px #586DCD,
+                        0 0 10px #586DCD,
+                        0 0 15px #586DCD,
+                        0 0 20px #586DCD,
+                        0 0 40px #6DBFFE,
+                        0 0 80px #6DBFFE,
+                        0 0 90px #6DBFFE,
+                        0 0 100px #6DBFFE,
+                        0 0 150px #6DBFFE;
+                        @include laptop {
+                            text-shadow: none;
+                        }
+                }
+            }
+            &:hover {
+                color: #FFE1AB;
+                text-shadow:
+                    0 0 5px #D56A7D,
+                    0 0 10px #D56A7D,
+                    0 0 15px #D56A7D,
+                    0 0 20px #D56A7D,
+                    0 0 40px #FFE1AB,
+                    0 0 80px #FFE1AB,
+                    0 0 90px #FFE1AB,
+                    0 0 100px #FFE1AB,
+                    0 0 150px #FFE1AB;
+                    transition: 0.5s;
+                    @include laptop {
+                        text-shadow: none;
+                    }
+            }
+        }
+    }
+    & .hamburger_button {
+        display: none;
+        margin: 15px 15px 0 0;
+        align-self: flex-start;
+        background: none;
+        border: none;
+        outline: none;
+        height: 25px;
+        width: 25px;
+        @include laptop {
+            display: list-item;
+            background-image: url("../../assets/img/components/hamburger.png");
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.nav_slide {
+    height: 100%;
+    transform: translateX(0);
+    transition: ease-out 0.5s;
+    z-index: 51;
+    & .nav-container {
+        @include laptop {
+            flex-direction: column;
+            background: #313480;
+            height: 100%;
+            width: 300px;
+            transform: translateX(0);
+            transition: ease-out 0.5s;
+        }
+        @include landscape_phones {
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    & .close {
+        opacity: 1 !important;
+        @include laptop {
+            margin: 15px 15px 0 0;
+            align-self: flex-start;
+            background: none;
+            border: none;
+            outline: none;
+            height: 25px;
+            width: 25px;
+            display: list-item;
+            background-image: url("../../assets/img/components/close.png");
+            background-position: center;
+            background-size: contain;
+        }
+        @include landscape_phones {
+            margin: 30px 0 0 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
+}
